@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'HTML & (S)CSS', 'React', 'Vue', 'Node.js', 'WordPress'];
+  const skills = ['Java', 'Python', 'Scala', 'C', 'JavaScript', 'Node', 'Flask'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -141,7 +141,7 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
+            <p>Hello! I'm Tilak, a CS student attending the University of Maryland </p>
 
             <p>
               I enjoy creating things that live on the internet, whether that be websites,
@@ -150,10 +150,10 @@ const About = () => {
             </p>
 
             <p>
-              Shortly after graduating from{' '}
-              <a href="https://www.ccis.northeastern.edu">Northeastern University</a>, I joined the
-              engineering team at <a href="https://www.upstatement.com">Upstatement</a> where I work
-              on a wide variety of interesting and meaningful projects on a daily basis.
+              After graduating from <a href="https://www.umd.edu/">The University of Maryland</a>, I
+              am joining the engineering team at <a href="https://www.twilio.com">Twilio</a> where I
+              hope to work on a wide variety of interesting and meaningful projects on a daily
+              basis.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
