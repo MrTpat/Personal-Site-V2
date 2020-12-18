@@ -18,7 +18,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && netlify deploy --prod"
   },
   "husky": {
     "hooks": {
@@ -54,6 +54,7 @@
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.7",
     "lodash": "^4.17.19",
+    "netlify-cli": "^2.69.10",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",

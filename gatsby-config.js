@@ -155,5 +155,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: '/Personal-Site-V2',
+  pathPrefix: '',
 };
