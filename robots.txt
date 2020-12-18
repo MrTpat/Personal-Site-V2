@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://tilakpatel.com/sitemap.xml
+Host: https://tilakpatel.com
