@@ -7,8 +7,6 @@ RESUME_SRCS = $(shell find $(RESUME_DIR) -name '*.tex')
 CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
 
 resume.pdf: $(RESUME_DIR)/resume.tex $(RESUME_SRCS)
-	sudo apt install texlive-xetex
-	sudo apt-get install texlive-fonts-recommended texlive-fonts-extra
 	$(CC) --jobname=$(OUTPUT_FILENAME) -output-directory=$(OUTPUT_DIR) $<
 	rm $(OUTPUT_DIR)/$(OUTPUT_FILENAME).aux
 	rm $(OUTPUT_DIR)/$(OUTPUT_FILENAME).log

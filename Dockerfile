@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16
 
 EXPOSE 8000
 WORKDIR /app
@@ -6,12 +6,25 @@ WORKDIR /app
 
 COPY . /app
 
-RUN npm install -g gatsby-cli
-RUN apt-get update
-RUN apt-get install curl -y
-RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash \
-&& export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" \
-&& nvm install
-RUN yarn
+RUN apt-get update && \
+  apt-get install --yes --no-install-recommends \
+  git \
+  ca-certificates \
+  inotify-tools \
+  lmodern \
+  make \
+  texlive-fonts-recommended \
+  texlive-generic-recommended \
+  texlive-fonts-extra \
+  texlive-lang-english \
+  texlive-lang-portuguese \
+  texlive-xetex && \
+  apt-get autoclean && apt-get --purge --yes autoremove && \
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENTRYPOINT ["npm", "start"]
+RUN cd static/Awesome-CV && make clean && make resume.pdf
+RUN cd ../..
+RUN npm install -g gatsby-cli
+RUN npm run build
+
+ENTRYPOINT ["npm", "run", "serve"]
