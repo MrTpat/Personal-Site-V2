@@ -25,6 +25,7 @@ RUN apt-get update && \
 RUN cd static/Awesome-CV && make clean && make resume.pdf
 RUN cd ../..
 RUN npm install -g gatsby-cli
+RUN npm install
 RUN npm run build
 
-ENTRYPOINT ["npm", "run", "serve"]
+ENTRYPOINT ["npm", "run", "start"]
