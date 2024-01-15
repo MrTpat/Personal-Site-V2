@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16.0.0
 
 EXPOSE 9000
 
