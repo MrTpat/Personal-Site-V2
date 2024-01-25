@@ -17,6 +17,7 @@ RUN apt-get update && \
   texlive-lang-portuguese \
   texlive-xetex && \
   apt-get autoclean && apt-get --purge --yes autoremove && \
+  zip && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY . .
@@ -27,4 +28,6 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | b
 RUN nvm install
 RUN yarn
 RUN npm run build
+RUN zip -r public public
+RUN ./deploy-to-netlify.sh
 ENTRYPOINT ["npm", "run", "serve"]
