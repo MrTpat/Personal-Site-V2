@@ -10,8 +10,8 @@ else
     echo "*** DEV DEPLOY ***"
     SITE_URL=${DEV_SITE_URL}
   fi
-  curl -H "Content-Type: application/zip" \
+  curl -f -H "Content-Type: application/zip" \
        -H "Authorization: Bearer ${NETLIFY_DEPLOY_KEY}" \
        --data-binary "@public.zip" \
-       https://api.netlify.com/api/v1/sites/${SITEURL}/deploys
+       https://api.netlify.com/api/v1/sites/${SITE_URL}/deploys
 fi
