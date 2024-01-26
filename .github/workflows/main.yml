@@ -25,7 +25,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/personal-site:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/personal-site:${{ github.ref_name }}-latest
           build-args: |
             CI=true
             GITHUB_HEAD_REF=${{ github.ref_name }}
