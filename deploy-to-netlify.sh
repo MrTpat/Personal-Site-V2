@@ -12,6 +12,6 @@ else
   fi
   curl -H "Content-Type: application/zip" \
        -H "Authorization: Bearer ${NETLIFY_DEPLOY_KEY}" \
-       --data-binary "@website.zip" \
+       --data-binary "@public.zip" \
        https://api.netlify.com/api/v1/sites/${SITEURL}/deploys
 fi
