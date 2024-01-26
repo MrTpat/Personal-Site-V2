@@ -3,7 +3,7 @@
 if [[ -z "${CI}" ]]; then
   echo "NO OP SINCE WE ARE NOT IN A CI ENVIRONMENT"
 else
-  if [[ -z "${GITHUB_HEAD_REF}" ]]; then
+  if [ "$GITHUB_HEAD_REF" == "main" ]; then
     echo "*** PRODUCTION DEPLOY ***"
     SITE_URL=${PROD_SITE_URL}
   else

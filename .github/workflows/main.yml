@@ -26,3 +26,10 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/personal-site:latest
+          build-args: |
+            CI=true
+            GITHUB_HEAD_REF=${{ github.ref_name }}
+            DEV_SITE_URL=${{ secrets.DEV_SITE_URL }}
+            PROD_SITE_URL=${{ secrets.PROD_SITE_URL }}
+            NETLIFY_DEPLOY_KEY=${{ secrets.NETLIFY_DEPLOY_KEY }}
+            SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
