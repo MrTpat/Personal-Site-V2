@@ -1,28 +1,13 @@
 ---
-date: '2020-05-14'
+date: '2021-05-14'
 title: 'Software Engineering Intern'
 company: 'Twilio'
-location: 'San Fransisco, CA'
-range: 'May 2020 - Aug 2021'
+location: 'Remote'
+range: 'May 2021 - Current'
 url: 'https://www.twilio.com/'
 ---
 
-- Wrote tool to analyze 500,000 Datadog dashboards and monitors
-- Generated best-practice monitors and dashboards by querying existing monitors and dashboards
-- Tool was made immediately available to thousands of Twilio engineers through in-house distribution system
-- Programmed primarily in Scala, utilizing cutting-edge libraries such as ZIO and HTTP4S
-- Hooked application into proper development environment, with formatting checks, testing, and CI/CD
----
-date: '2020-05-14'
-title: 'Software Engineering Intern'
-company: 'Twilio'
-location: 'San Fransisco, CA'
-range: 'May 2020 - Aug 2021'
-url: 'https://www.twilio.com/'
----
-
-- Wrote tool to analyze 500,000 Datadog dashboards and monitors
-- Generated best-practice monitors and dashboards by querying existing monitors and dashboards
-- Tool was made immediately available to thousands of Twilio engineers through in-house distribution system
-- Programmed primarily in Scala, utilizing cutting-edge libraries such as ZIO and HTTP4S
-- Hooked application into proper development environment, with formatting checks, testing, and CI/CD
+- Led API implementation for a customer-facing service that serves billions of requests a day
+- Led service and traffic-splitting strategies to onboard all Twilio customers to new service silently and without disruption
+- Led zero-downtime migration of EC2 database system to AWS managed solution
+- Implemented architectural changes to accomodate multi-regional Twilio customers

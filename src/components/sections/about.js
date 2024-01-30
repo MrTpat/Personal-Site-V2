@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Java', 'Python', 'Scala', 'C', 'JavaScript', 'Node', 'Flask'];
+  const skills = ['Java', 'Python', 'Kubernetes', 'AWS'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -141,19 +141,16 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Tilak, a CS student attending the University of Maryland </p>
+          <p>Hello! I'm Tilak, a Senior Software Engineer at Twilio</p>
 
             <p>
-              I enjoy creating things that live on the internet, whether that be websites,
-              applications, or anything in between. My goal is to always build products that provide
-              pixel-perfect, performant experiences.
+              I enjoy working on high-performance systems that have a direct impact on customer experience.
+              My current work at Twilio involves scaling and implementing high-velocity billing software to
+              accomodate various pricing strategies.
             </p>
 
             <p>
-              After graduating from <a href="https://www.umd.edu/">The University of Maryland</a>, I
-              am joining the engineering team at <a href="https://www.twilio.com">Twilio</a> where I
-              hope to work on a wide variety of interesting and meaningful projects on a daily
-              basis.
+              I am also interested in open-source contributions - particularly for CLI tools.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
