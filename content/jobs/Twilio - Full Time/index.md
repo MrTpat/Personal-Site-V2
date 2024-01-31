@@ -1,6 +1,6 @@
 ---
 date: '2021-05-14'
-title: 'Software Engineering Intern'
+title: 'Senior Software Engineer'
 company: 'Twilio'
 location: 'Remote'
 range: 'May 2021 - Current'
