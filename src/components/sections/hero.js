@@ -52,8 +52,7 @@ const Hero = () => {
   const three = <h3 className="big-heading">I create through code.</h3>;
   const four = (
     <p>
-      I'm a CS student at the University Maryland, joining Twilio in San Fransisco as a Software
-      Engineer Summer 2021.
+    I am a Senior Software Engineer based out of New York, currently working @ Twilio. My engineering specialties include Java, Python, AWS and Kubernetes.
     </p>
   );
   const five = (
