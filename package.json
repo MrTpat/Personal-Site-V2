@@ -12,13 +12,15 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve --host=0.0.0.0",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build && netlify deploy --prod"
+    "serve": "gatsby serve --host=0.0.0.0 --prefix-paths",
+    "clean": "gatsby clean"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "husky": {
     "hooks": {
@@ -40,7 +42,6 @@
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-google-analytics": "^2.1.29",
     "gatsby-plugin-manifest": "^2.2.31",
-    "gatsby-plugin-netlify": "^2.1.27",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-robots-txt": "^1.5.0",
@@ -54,7 +55,6 @@
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.7",
     "lodash": "^4.17.19",
-    "netlify-cli": "^2.69.10",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",

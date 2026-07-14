@@ -5,7 +5,7 @@
   brittanychiang.com - v4
 </h1>
 <p align="center">
-  The fourth iteration of <a href="https://brittanychiang.com" target="_blank">brittanychiang.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  The fourth iteration of <a href="https://brittanychiang.com" target="_blank">brittanychiang.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>, forked and hosted with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
 </p>
 <p align="center">
   Previous iterations:
@@ -14,8 +14,8 @@
   <a href="https://github.com/bchiang7/bchiang7.github.io" target="_blank">v3</a>
 </p>
 <p align="center">
-  <a href="https://app.netlify.com/sites/brittanychiang/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/1963b488-7b78-48c9-9e2d-6fb5e47ab3af/deploy-status" alt="Netlify Status" />
+  <a href="https://github.com/MrTpat/Personal-Site-V2/actions/workflows/deploy.yml" target="_blank">
+    <img src="https://github.com/MrTpat/Personal-Site-V2/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status" />
   </a>
 </p>
 
@@ -35,23 +35,20 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [br
 
 ## 🛠 Installation & Set Up
 
-1. Install the Gatsby CLI
-
-   ```sh
-   npm install -g gatsby-cli
-   ```
-
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
+1. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm) (version is pinned in `.nvmrc`)
 
    ```sh
    nvm install
+   nvm use
    ```
 
-3. Install dependencies
+2. Install dependencies
 
    ```sh
    yarn
    ```
+
+3. Make sure `static/resume.pdf` exists (see [Resume PDF](#-resume-pdf) below — it's not committed by default and the build will fail without it)
 
 4. Start the development server
 
@@ -61,7 +58,7 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [br
 
 ## 🚀 Building and Running for Production
 
-1. Generate a full static production build
+1. Generate a full static production build (built with the `/Personal-Site-V2` path prefix used on GitHub Pages)
 
    ```sh
    npm run build
@@ -72,6 +69,27 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [br
    ```sh
    npm run serve
    ```
+
+## 📄 Resume PDF
+
+`src/components/nav.js` and `src/components/menu.js` import `static/resume.pdf` directly, so it must exist on disk or the build (`npm start` / `npm run build`) will fail. It isn't generated automatically — when you update your resume:
+
+```sh
+cd static/Awesome-CV
+make
+cp resume.pdf ../resume.pdf
+```
+
+Then commit the updated `static/resume.pdf`.
+
+## ☁️ Deployment
+
+The site is hosted on **GitHub Pages** at https://mrtpat.github.io/Personal-Site-V2/, driven by two workflows in `.github/workflows/`:
+
+- **`deploy.yml`** — on every push to `main`, builds the site and publishes `public/` to the `gh-pages` branch.
+- **`pr-preview.yml`** — on every pull request, builds and publishes a live preview to `https://mrtpat.github.io/Personal-Site-V2/pr-preview/pr-<number>/`, comments the link on the PR, and tears the preview down automatically when the PR closes.
+
+No manual deploy steps are needed — merging to `main` is the only thing that ships to production.
 
 ## 🎨 Color Reference
 
