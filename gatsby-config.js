@@ -5,7 +5,7 @@ module.exports = {
     title: 'Tilak Patel',
     description:
       'Tilak Patelis a software engineer specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.',
-    siteUrl: 'https://tilakpatel.com', // No trailing slash allowed!
+    siteUrl: 'https://mrtpat.github.io/Personal-Site-V2', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
   },
@@ -155,5 +155,7 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: '',
+  // Overridden by PATH_PREFIX in CI for PR previews (see .github/workflows/pr-preview.yml),
+  // which nest each preview under /pr-preview/pr-<number>/ on top of the project path.
+  pathPrefix: process.env.PATH_PREFIX || '/Personal-Site-V2',
 };
